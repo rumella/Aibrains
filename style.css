@@ -1,0 +1,319 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #d4e9ff, #b7d7f7);
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* Swiper Konteyner Ayarları */
+.swiper-container {
+    width: 100%; /* Tarayıcı genişliğinin tamamını kapsar */
+    height: 700px; /* Slayt yüksekliği */
+    margin: auto; /* Ortalamak için */
+}
+
+
+/* Swiper Slide Alanı */
+.swiper-slide {
+    display: flex; /* Flexbox kullanımı */
+    justify-content: center; /* Yatayda ortala */
+    align-items: center; /* Dikeyde ortala */
+    height: 500px; /* Sabit bir yükseklik tanımlayın */
+    overflow: hidden; /* Taşmaları gizler */
+}
+
+/* Resim Ayarları */
+.swiper-slide img {
+    max-width: 100%; /* Genişlik orijinal boyuta göre ayarlanır */
+    max-height: 100%; /* Maksimum yükseklik slayt alanını geçmez */
+    object-fit: contain; /* Resmin düzgün bir şekilde boyutlandırılmasını sağlar */
+    display: block; /* Blok düzeyde yerleştirir */
+    margin: auto; /* Resmi tam ortalar */
+}
+
+
+
+
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(45deg, #5dade2, #85c1e9);
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+header:hover {
+    background: linear-gradient(45deg, #85c1e9, #5dade2);
+    transform: translateY(-2px);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+header .welcome {
+    font-size: 1.1rem;
+    opacity: 0.85;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    font-weight: 700;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+header a:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    animation: fadeIn 1s ease-in-out;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+/* Form Container */
+.form-container {
+    background: linear-gradient(135deg, #f0f8ff, #e6f3ff);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.form-container:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #eaf6ff, #d9ecff);
+}
+
+.form-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    font-weight: bold;
+    text-shadow: 1px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.form-container label {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    color: #34495e;
+}
+
+.form-container input,
+.form-container textarea,
+.form-container select {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    margin: 12px auto;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    font-size: 1rem;
+    background: #f9f9f9;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container textarea:focus,
+.form-container select:focus {
+    border-color: #5dade2;
+    box-shadow: 0 0 12px rgba(93, 173, 226, 0.4);
+    outline: none;
+}
+
+.form-container button {
+    background: linear-gradient(45deg, #5dade2, #85c1e9);
+    color: #fff;
+    font-weight: bold;
+    padding: 15px 45px;
+    margin: 20px auto 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    display: block;
+    text-align: center;
+}
+
+.form-container button:hover {
+    background: linear-gradient(45deg, #85c1e9, #5dade2);
+    transform: scale(1.1);
+}
+
+/* Blog Post Styles */
+.blog-post {
+    background: #fff;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.blog-post h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #34495e;
+    font-weight: bold;
+    text-shadow: 1px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.blog-post .date {
+    font-size: 0.95rem;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+}
+
+.blog-post .actions {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.blog-post .actions a,
+.blog-post .actions button {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    background: #5dade2;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+.blog-post .actions a:hover,
+.blog-post .actions button:hover {
+    background: #85c1e9;
+    transform: scale(1.1);
+}
+
+/* Modal Styles */
+.modal {
+    color: #000000;
+    background-color: rgb(207, 232, 252); /* Arkaplan rengi */
+    width: 550px; 
+    height: 200px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Üstte görünmesi için */
+
+    padding: 20px; /* İç boşluk */
+    box-shadow: 0 114px 118px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+    border-radius: 18px; /* Kenarları yuvarlama */
+  }
+  
+
+.modal-content {
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    padding: 30px 35px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+    animation: slideDown 0.3s ease-in-out;
+}
+
+.modal-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #34495e;
+    text-shadow: 1px 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.modal-close button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #5dade2;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close button:hover {
+    color: #85c1e9;
+}
+
+/* Animations */
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
